@@ -165,9 +165,22 @@ class _CardType4 extends StatelessWidget {
         child: Stack(
           children: [
             Image.network(
-                "https://picsum.photos/id/${elevation.toInt()}/600/250.jpg",
-                height: 250,
-                fit: BoxFit.cover),
+              "https://picsum.photos/id/${elevation.toInt()}/600/250.jpg",
+              height: 250,
+              fit: BoxFit.cover,
+              loadingBuilder: (context, child, loadingProgress) {
+                if (loadingProgress == null) {
+                  return child;
+                } else {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+              },
+              errorBuilder: (context, error, stackTrace) => const Center(
+                child: Text("La imagen no se pudo cargar"),
+              ),
+            ),
             Align(
               alignment: Alignment.topRight,
               child: Container(
