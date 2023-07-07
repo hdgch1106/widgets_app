@@ -100,6 +100,13 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
                 placeholder: const AssetImage("assets/images/jar-loading.gif"),
                 image: NetworkImage(
                     "https://picsum.photos/id/${imagesIds[index]}/500/250.jpg"),
+                imageErrorBuilder: (context, error, stackTrace) {
+                  return const SizedBox(
+                    height: 250,
+                    width: double.infinity,
+                    child: Center(child: Text("Error al cargar la imagen")),
+                  );
+                },
               );
             },
           ),

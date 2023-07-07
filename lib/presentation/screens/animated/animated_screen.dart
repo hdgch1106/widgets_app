@@ -13,7 +13,7 @@ class AnimatedScreen extends StatefulWidget {
 class _AnimatedScreenState extends State<AnimatedScreen> {
   double width = 50;
   double height = 50;
-  Color color = Colors.black;
+  Color color = Colors.red;
   double borderRadius = 15.0;
 
   void changeShape() {
