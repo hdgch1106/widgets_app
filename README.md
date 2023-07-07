@@ -1,4 +1,4 @@
-# Aplicación Móvidel Widgets con Flutter
+# Aplicación Móvil Widgets con Flutter
 Aplicación simple que muestra una variedad de widgets e interacciones con Flutter utilizando material 3
 
 ## Funciones
